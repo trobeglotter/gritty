@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8GK1PFQDBY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-8GK1PFQDBY');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitter:wght@300;400;500&family=Inter:wght@300;700&family=Patua+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Jawn.church</title>
+</head>
+
+<body onload="openQuestionPopup()">
+    <!-- jawn -->
+    <div id="container">
+        <section id="header">
+            <h1 id="header-title">CONFESSIONAL</h1>
+            <nav>
+                <div class="nav-links nav-shop">
+                    <a class="nav-shop-link" href="mailto:jawn.church@gmail.com">SHOP</a>
+                </div>
+                <div class="nav-links nav-email"><a class="nav-email-link" href="mailto:jawn.church@gmail.com">EMAIL</a>
+                </div>
+            </nav>
+        </section>
+
+        <section id="booth-section">
+            <section class="outter">
+                <section class="table">
+                    <div class="tableCell">
+                        <img id="preist-image" src="preist-booth-image.png" alt="">
+                    </div>
+                </section>
+                <div class='inner'>
+                    <div class='drape-unit'></div>
+                    <div class='drape-unit'></div>
+                    <div class='drape-unit'></div>
+                    <div class='drape-unit'></div>
+                    <div class='drape-unit'></div>
+                    <div class='drape-unit'></div>
+                    <div class='drape-unit'></div>
+                    <div class='drape-unit'></div>
+                    <div class='drape-unit'></div>
+                    <div class='drape-unit'></div>
+                </div>
+            </section>
+            <div class="question-confession">
+                <h5 class="white-background question-confession-text">Do you want to confess your sins?</h5>
+                <div class="question-confession-buttons-container">
+                    <button onclick="clickYes()" class="question-confession-buttons">
+                        <h5 class="question-confession-response">Yes</h5>
+                    </button>
+
+                    <button onclick="clickNo()" class="question-confession-buttons">
+                        <h5 class="question-confession-response">No</h5>
+                    </button>
+                </div>
+            </div>
+            <div class="no-popup-open">
+                <h5 class="white-background question-confession-text">Fuck around and find out...</h5>
+            </div>
+            <div class="yes-popup-open">
+                <h5 class="white-background question-confession-text">Your sins are forgiven. Go in jawn.</h5>
+                <button onclick="thankGrather()" class="question-confession-buttons">
+                    <h5 class="question-confession-response">Thank the Grather</h5>
+                </button>
+            </div>
+        </section>
+
+        <footer>
+            <a id="footer-link" href="https://jawn.church">jawn.church</a>
+            <p id="footer-copy">Copyright Suzanne Curtis - jawn.church@gmail.com</p>
+        </footer>
+    </div>
+
+    <script>
+
+        function changeImage(path) {
+            document.getElementById("current-image").src = "shopping-gallery/img-" + path + ".jpg";
+        }
+
+        function openQuestionPopup() {
+            setTimeout(() => {
+                document.querySelector('.question-confession').classList.add('reveal-popup');
+            }, 3000);
+        }
+
+        function clickYes() {
+            document.querySelector('.question-confession').classList.add('close-popup');
+            document.querySelector('.yes-popup-open').classList.add('reveal-popup');
+        }
+
+        function clickNo() {
+            document.querySelector('.question-confession').classList.add('close-popup');
+            document.querySelector('.no-popup-open').classList.add('reveal-popup');
+            setTimeout(() => {
+                document.querySelector('.no-popup-open').classList.add('close-popup');
+            }, 1500);
+        }
+
+        function thankGrather() {
+            document.querySelector('.yes-popup-open').classList.add('close-popup');
+
+            setTimeout(() => {
+                openCurtain();
+            }, 1500);
+        }
+
+        function openCurtain() {
+            document.querySelector('.inner').classList.add('curtain-open');
+        }
+    </script>
+
+</body>
+
+</html>

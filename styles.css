@@ -1,0 +1,459 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-family: "Bitter";
+    background-color: black;
+    color: white;
+}
+
+#container {
+    margin: 0 20% 0 20%;
+}
+
+#header-title {
+    font-family: 'Patua One';
+    font-size: 9vw;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-email-link {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 1.75rem;
+    text-decoration: none;
+}
+
+.nav-shop-link {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 1.75rem;
+    text-decoration: none;
+}
+
+.nav-shop-link:hover {
+    background-color: #C92B02;
+}
+
+.nav-email-link:hover {
+    background-color: #C92B02;
+}
+
+.nav-shop-link {
+    margin-left: 1vw;
+}
+
+.nav-email-link {
+    margin-right: 1vw;
+}
+
+/* BOOTH SECTION */
+
+#booth-section {
+    margin-top: 10vh;
+    font-family: "Inter";
+    font-weight: 700;
+    overflow: hidden;
+}
+
+#preist-image {
+    width: 35vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.outter {
+    background: #C92B02;
+    overflow: hidden;
+    position: relative;
+    height: 65vh;
+}
+
+.inner {
+    width: 100%;
+    position: absolute;
+    top: -10%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    transform-style: preserve-3d;
+    transition: transform 6s ease;
+    transform-origin: -120% top;
+}
+
+.drape-unit {
+    width: 5.55vw;
+    height: 65vh;
+    background:
+        repeating-linear-gradient(90deg, #C92B02 4vw, #491002 8vw, #C92B02 10vw);
+    background-size: 100% 100%;
+    display: inline-block;
+    transform-origin: 0 0%;
+    transform: rotate(3deg);
+    animation: drape-unit 2s ease infinite;
+}
+
+@keyframes drape-unit {
+    50% {
+        transform: rotate(-3deg);
+    }
+}
+
+.drape-unit:nth-child(1) {
+    animation-delay: -0.1s;
+}
+
+.drape-unit:nth-child(2) {
+    animation-delay: -0.2s;
+}
+
+.drape-unit:nth-child(3) {
+    animation-delay: -0.3s;
+}
+
+.drape-unit:nth-child(4) {
+    animation-delay: -0.4s;
+}
+
+.drape-unit:nth-child(5) {
+    animation-delay: -0.5s;
+}
+
+.drape-unit:nth-child(6) {
+    animation-delay: -0.6s;
+}
+
+.drape-unit:nth-child(7) {
+    animation-delay: -.7s;
+}
+
+.drape-unit:nth-child(8) {
+    animation-delay: -.8s;
+}
+
+.drape-unit:nth-child(9) {
+    animation-delay: -.9s;
+}
+
+.drape-unit:nth-child(10) {
+    animation-delay: -1s;
+}
+
+.table {
+    display: table;
+    width: 100%;
+    height: 65vh;
+    text-align: center;
+}
+
+.tableCell {
+    color: darken(#C92B02, 12%);
+    display: table-cell;
+    vertical-align: middle;
+    transition: color 3s ease;
+}
+
+.question-confession {
+    visibility: hidden;
+    border: none;
+    border-radius: 5px;
+    width: 40vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #FFF;
+    position: fixed;
+    top: 75vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+}
+
+.question-confession-buttons-container {
+    background-color: white;
+    border: none;
+}
+
+.question-confession-buttons {
+    background-color: white;
+    border: none;
+    padding: 5px;
+}
+
+.question-confession-text {
+    font-size: 1.75vw;
+    padding-bottom: 3vh;
+}
+
+
+.question-confession-response {
+    font-family: "Inter";
+    font-size: 1.25vw;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+    padding: 1.25vh 3vw 1.25vh 3vw;
+    background-color: #C92B02;
+    border: none;
+    border-radius: 5px;
+}
+
+.no-popup-open {
+    visibility: hidden;
+    border: none;
+    border-radius: 5px;
+    width: 40vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #FFF;
+    position: fixed;
+    top: 75vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+}
+
+.yes-popup-open {
+    visibility: hidden;
+    border: none;
+    border-radius: 5px;
+    width: 40vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #FFF;
+    position: fixed;
+    top: 75vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+}
+
+.reveal-popup {
+    visibility: visible;
+}
+
+.close-popup {
+    visibility: hidden;
+}
+
+.curtain-open {
+    transform-origin: -120% top;
+    transform: scaleX(0);
+}
+
+/* SHOP SECTION */
+
+#shop {
+    margin-top: 10vh;
+    font-family: "Inter";
+    font-weight: 700;
+}
+
+#shop-header {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 3rem;
+    color: black;
+    padding: 3vh 3vw 0 3vh;
+}
+
+#current-image-container {
+    padding: 3vh;
+}
+
+#current-image {
+    max-width: 90%;
+    background-color: white;
+}
+
+#shopping-image-container {
+    max-width: 100%;
+    padding: 0 3vh 3vh 3vh;
+}
+
+.shopping-image {
+    width: 10vw;
+    opacity: 80%;
+}
+
+#product-text-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-header {
+    font-family: "Inter";
+    font-weight: 700;
+    color: black;
+    padding: 0 3vh 1vh 3vh;
+}
+
+.product-text {
+    font-weight: 300;
+    color: black;
+    padding: 0 3vh 3vh 3vh;
+    line-height: 2;
+}
+
+#product-text-link {
+    color: black;
+}
+
+#buy-button-container {
+    padding: 0 3vh 3vh 3vh;
+    display: flex;
+    align-items: baseline;
+}
+
+.white-background {
+    background-color: white;
+    color: black;
+}
+
+
+#buy-button-container {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+#buy-button {
+    font-family: "Inter";
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+    padding: 1.25vh 3vw 1.25vh 3vw;
+    background-color: #C92B02;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 1vh;
+}
+
+#shopify-logo {
+    height: 3.25vw;
+}
+
+#arrow-up {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin-right: 6em;
+    margin-bottom: 1em;
+}
+
+footer {
+    text-align: center;
+    padding: 5vh 0 5vh 0;
+}
+
+#footer-link {
+    font-family: 'Patua One';
+    text-decoration: none;
+    font-size: 3rem;
+}
+
+#footer-copy {
+    padding-top: 4vh;
+    font-family: "Inter";
+}
+
+#arrow-up-img {
+    width: 5vw;
+}
+
+@media (max-width: 649px) {
+    #header-title {
+        font-size: 13vw;
+    }
+
+    .nav-shop-link {
+        margin-left: 9vw;
+    }
+
+    .nav-email-link {
+        margin-right: 9vw;
+    }
+
+
+    #preist-image {
+        width: 85vw;
+    }
+
+    .outter {
+        background: #C92B02;
+        overflow: hidden;
+        position: relative;
+        height: 65vh;
+    }
+
+    .inner {
+        width: 100%;
+        position: absolute;
+        top: -10%;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        transform-style: preserve-3d;
+        transition: transform 6s ease;
+        transform-origin: -120% top;
+    }
+
+    .drape-unit {
+        width: 9vw;
+        height: 65vh;
+        background:
+            repeating-linear-gradient(90deg, #C92B02 4vw, #491002 8vw, #C92B02 10vw);
+        background-size: 100% 100%;
+        display: inline-block;
+        transform-origin: 0 0%;
+        transform: rotate(3deg);
+        animation: drape-unit 2s ease infinite;
+    }
+
+    .question-confession,
+    .no-popup-open,
+    .yes-popup-open {
+        width: 60vw;
+        height: 20vh;
+    }
+
+    .question-confession-text,
+    .no-popup-open,
+    .yes-popup-open {
+        font-size: 6vw;
+        text-align: center;
+    }
+
+    .question-confession-response {
+        font-size: 5vw;
+    }
+
+    #shopify-logo {
+        height: 10vw;
+        margin-left: 2vw;
+        margin-right: 5vw;
+    }
+
+    #arrow-up {
+        display: none;
+    }
+
+    #container {
+        margin: 0;
+    }
+}
